@@ -1,0 +1,26 @@
+.container-fluid
+  .well.well-lg
+    .row
+      .col-md-6
+        .panel.panel-primary
+          .panel-body.pre-scrollable
+            .clearfix
+              blockquote.me.pull-right.mensahe
+        = form_for :message, :html => {:id => "message-form", :multipart => true, :remote => true} do |f|
+          label.col-sm-12 Message:
+          .col-sm-10
+            = f.text_field :content1, class: 'form-control', autofocus: true
+          .col-sm-2
+            = f.button 'Send', class: 'btn btn-primary', :id => "submit-form1"
+
+      .col-md-6
+        .panel.panel-primary
+          .panel-body.pre-scrollable
+            .clearfix
+              blockquote.me.pull-right.mensahe
+        = form_for :message, :html => {:id => "message-form", :multipart => true, :remote => true} do |f|
+          label.col-sm-12 Message:
+          .col-sm-10
+            = f.text_field :content2, class: 'form-control', autofocus: true
+          .col-sm-2
+            = f.button 'Send', class: 'btn btn-primary', :id => "submit-form2"
